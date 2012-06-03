@@ -1,0 +1,305 @@
+/**
+ * sidebar.css
+ * @author Izaak Schroeder
+ *
+ * Styling for the sidebar.
+ */
+
+#SideBar
+{
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	-webkit-box-pack: end;
+	background: #d5dbe4;
+	border-right: solid 1px #999;
+	min-width: 250px;
+	width: 250px;
+}
+
+#SideBar * {
+	resize: none;
+	
+}
+
+#SideBar ul
+{
+	list-style-type: none;
+}
+
+#SideBar a {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/* Data list */
+#DataList {
+	overflow-y: auto;
+	font-family: Arial;
+	-webkit-box-flex: 1.0;
+}
+
+#DataList > ul > li > a
+{
+	color: #333;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 12px;
+	margin-top: 12px;
+	text-indent: 2em;
+	line-height: 10px !important;
+	display: inline-block;
+	width: 100%;
+	background: transparent url(../images/triangle_180.png) no-repeat scroll 10px 0;
+	background-size: contain;
+	background-origin: content-box;
+	text-shadow:0 1px 0 #f6f6f6;
+	padding-bottom: 6px;
+}
+
+#DataList > ul > li > a:active {
+	color: #000;
+}
+
+#DataList > ul > li.Closed > a {
+	background-image: url(../images/triangle_90.png) !important;
+}
+
+#DataList > ul > li.Closed > ul {
+	opacity: 0;
+	height: 0px;
+	overflow-y: hidden;
+	-webkit-transition: all 0.5s ease;
+}
+
+#DataList > ul > li > ul {
+	-webkit-transition: all 0.5s ease;
+	opacity: 1;
+	height: auto;
+}
+
+#DataList > ul ul li
+{
+	margin: 0;
+	line-height: 24px;
+	position: relative;
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+}
+
+#DataList > ul > li > ul > li {
+
+}
+
+#DataList > ul > li > ul > li.Selected {
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #7584a3), color-stop(1, #9dadc4));
+	-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+}
+
+#DataList > ul > li > ul > li.Selected > a
+{
+	font-weight: bold;
+	color: #fff;
+	text-shadow: none;
+}
+
+#DataList > ul > li > ul > li.Selected a:active {
+	color: #fff;
+	text-shadow: none;
+}
+
+#DataList > ul > li > ul > li.Selected a:before {
+	color: #fff;
+}
+
+#DataList > ul > li > ul > li > a:before {
+	font-family: "Pictos";
+	font-size: 30px;
+	left: 26px;
+	display: block;
+	position: absolute;
+	bottom: 3px;
+	top: 0px;
+	right: 0;
+	color: #333;
+	-webkit-transition: color 1s ease;
+}
+
+#DataList > ul > li > ul > li > a:hover:before {
+	-webkit-transition: color 1s ease;
+}
+
+#DataList > ul > li > ul > li > a
+{
+	text-shadow:0 1px 0 #f6f6f6;
+	text-indent: 0;
+	text-transform: none;
+	font-weight: normal;
+	padding-left: 4.5em;
+	padding-bottom: 2px;
+	color: #222;
+	font-size: 13px;
+	text-decoration: none;
+	outline: none;
+	display: -webkit-box;
+	-webkit-box-flex: 1.0;
+	z-index: inherit;
+	position: relative;
+	padding-right: 12px;
+}
+
+#DataList > ul > li > ul > li > a:active {
+	color: #000;
+	text-shadow:0 1px 0 #eee;
+}
+
+#DataList > ul > li > ul > li > ul:last-child {
+	margin-right: 7px;
+}
+
+#DataList .QuickStatuses, #DataList .QuickActions {
+	display: -webkit-box;
+	list-style-type: none;
+	-webkit-box-align: center;
+}
+
+#DataList .QuickStatuses li a, #DataList .QuickActions li a {
+	position: relative;
+}
+
+#DataList .QuickStatuses li a:before, #DataList .QuickActions li a:before {
+	font-family: "Pictos";
+	font-size: 1.2em;
+	color: #333;
+	text-shadow: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin-right: 4px;
+}
+
+#DataList .Selected .QuickStatuses li a:before, #DataList .QuickActions .QuickStatuses li a:before {
+	color: #eee;
+}
+
+
+
+
+#DataList .QuickStatuses li[data-status-type="new"] a {
+	border-radius: 9999px;
+	color: #fff;
+	padding: 0;
+	margin: 0;
+	font-size: 9px;
+	font-weight: bold;
+	background: #333;
+	padding-left: 7px;
+	padding-right: 7px;
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+	display: -webkit-box;
+	-webkit-box-align: center;
+	height: 2em;
+	line-height: 9px;
+	top: -1px;  /* compensate for the drop shadow ;) */
+}
+
+#DataList .Selected .QuickStatuses li[data-status-type="new"] a {
+	background: #fff;
+	color: #888;
+}
+
+
+.QuickStatuses li[data-status-type="disconnected"] a:before {
+	content: '\1E6B';
+}
+
+.QuickActions li[data-status-type="eject"] a:before {
+	content: '\1E1C';
+}
+
+.QuickStatuses li[data-status-type="synchronizing"] a:before {
+	content: '\1EF8';
+}
+
+
+
+
+
+
+
+/* Actions list */
+#SideBarActions {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, #e6e6e6), color-stop(0.5, #f7f7f7));
+	border-top: solid 1px #c0c0c0;
+	position: relative;
+}
+
+#SideBarActions ul {
+	-webkit-box-flex: 1.0;
+}
+
+
+#AddCollectionLink:after, #AddSourceLink:after {	
+	text-shadow: 	rgba(255,255,255,0.08) 0 1px 0;
+	vertical-align: 0%;
+	display: inline-block;
+	position: relative;
+}
+#AddCollectionLink:after { content: "\1EBA"; }
+#AddSourceLink:after { content: "\1E7F"; }
+
+#SideBarActions li {
+	float: left;
+}
+
+#SideBarActions li a {
+	display: inline-block;
+	border-right: solid 1px #c0c0c0;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-decoration: none;
+	color: #333;
+	font-size: 26px;
+	font-family: "Pictos";
+	text-shadow:0 1px 0 #f6f6f6;
+}
+
+#SideBarActions li a:active {
+	background: rgba(0,0,0,0.6);
+	color: #eee;
+	text-shadow: none;
+}
+
+/* Resize widget */
+#SideBarResizer {
+	cursor: col-resize;
+	width: 18px;
+	display: -webkit-box;
+	background: transparent url(../images/resize.png) no-repeat scroll 50% 50% ;
+}
+
+
+
+
+
+#Collections li a:before {
+	font-family: "Pictos";
+	content: '\1EBD' !important;
+	font-size: 30px !important;
+	left: 26px !important;
+}
+
+
+
+#Collections li.Selected a:before {
+	content: '\1EBC' !important;
+}
+

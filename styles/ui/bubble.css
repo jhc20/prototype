@@ -1,0 +1,54 @@
+/**
+ * bubble.css
+ *
+ * @note Inspired by http://www.dinnermint.org/blog/css/creating-triangles-in-css/
+ */
+
+.Bubble {
+	background-color:#fff;
+	border:2px solid #666666;
+	
+	line-height:1.3em;
+	margin:10px auto;
+	padding:20px;
+	position:relative;
+	text-align:left;
+	width:300px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	-moz-box-shadow:0 0 5px #888888;
+	-webkit-box-shadow:0 0 5px #888888;
+	font-size: 14px;
+}
+
+.Bubble h1 {
+	font-size:35px;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+
+
+.Bubble:before {
+	border-color: #666666 transparent transparent transparent;
+	border-style: solid;
+	border-width: 10px;
+	height:0;
+	width:0;
+	position:absolute;
+	bottom:-22px;
+	left:30px;
+	content: " ";
+}
+
+.Bubble:after {
+	border-color: #fff transparent transparent transparent;
+	border-style: solid;
+	border-width: 10px;
+	height:0;
+	width:0;
+	position:absolute;
+	bottom:-19px;
+	left:30px;
+	content: " ";
+}

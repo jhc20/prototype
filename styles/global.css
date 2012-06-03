@@ -1,0 +1,412 @@
+/**
+ * global.css
+ * @author Izaak Schroeder
+ * @author Gagan Sandhu
+ *
+ * Styles used everywhere.
+ */
+
+@charset "utf-8";
+
+@import url("forms.css");
+@import url("fonts.css");
+@import url("sidebar.css");
+@import url("types.css");
+@import url("status.css");
+@import url("filters.css");
+@import url("notifications.css");
+
+@import url("meter.css");
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	display: -webkit-box;
+	height: 100%;
+}
+
+body {
+	background: #333;
+	font-family: "Lucida Grande", "Myriad Pro", "Arial";
+	-webkit-box-flex: 1;
+	-webkit-user-select:none;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	/*margin: 20px;*/
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover {
+	color: #111;
+}
+
+#Container {
+ -webkit-box-flex: 1;
+ display: -webkit-box;
+ background: #ccc;
+ /*
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+ border-bottom-left-radius: 8px;
+ border-bottom-right-radius: 8px;
+ */
+ background: -webkit-gradient(linear, left bottom, left top, color-stop(0.8, #cecece), color-stop(1, #9a9a9a));
+ -webkit-box-orient: vertical;
+ position: relative;
+ overflow: hidden;
+}
+
+
+header {
+	margin: 7px;
+	text-align: center;
+	font-size: 12px;
+	color: #000;
+}
+
+footer {
+	text-align: center;
+	font-size: 12px;
+	padding: 12px;
+	text-shadow:0 1px 0 #f6f6f6;
+}
+
+footer ul {
+	position: absolute;
+	right: 20px;
+	list-style-type: none;
+}
+
+footer li {
+	float: left;
+}
+
+footer li a {
+	margin-left: 12px;
+}
+
+#TopBar {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	padding: 12px 0;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.1, rgb(167,167,167)),
+		color-stop(0.9, rgb(208,208,208))
+	);
+	/*
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	*/
+}
+
+#TopBar > * {
+	vertical-align: middle;
+	margin-left: 12px;
+}
+
+#TopBar > *:last-child {
+	margin-right: 20px;
+}
+
+#Search input {
+	width: 18em;
+	outline: none;
+	margin-left:0px;
+}
+
+
+
+.PlayAction a:after{
+	font-size: 28px;
+	font-family: 'Pictos', sans-serif;
+	text-shadow: 	rgba(255,255,255,0.08) 0 1px 0;
+	
+	display: inline-block;
+	position: relative;
+
+}
+
+.PlayAction.Clicked a#play-play:after{
+	content: "\1EDE";
+}
+#play-previous:after { content: "\1E7D"; }
+#play-play:after { content: "\1EE1"; }
+#play-next:after { content: "\1EDF"; }
+
+
+
+.PlayAction {
+	display:inline-block;
+	margin:0px;
+	
+}
+
+.PlayAction a {
+	border-radius: 50%;
+	background: -webkit-linear-gradient(top,  #f4f4f4 0%,#cfcfcf 100%);
+	box-shadow: 0px 0px 1px 1px rgba(0,0,0,.3);
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	color: #737373;
+	padding: 4px;
+}
+
+.PlayAction a:active {
+	background: #666463;
+	color: #eee;
+	/*-webkit-box-shadow:inset 1px 2px 5px rgba(0,0,0,0.4);*/
+	text-shadow: none;
+	
+	
+}
+
+
+
+
+
+#DataViews li a:after{	
+	font-family: 'Pictos', sans-serif;
+	text-shadow: rgba(255,255,255,0.08) 0 1px 0;
+	vertical-align: -20%;
+	
+	display: inline-block;
+	position: relative;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 2px;
+	padding-bottom: 4px;
+	font-size: 25px;
+}
+
+
+/*
+#viewbut-album:after { content: "\0175"; }
+*/
+
+
+#DataViews {
+	list-style-type: none;
+	white-space: nowrap;
+}
+
+#DataViews li {
+	float: left;
+	display:inline-block;
+}
+
+#DataViews li a {
+	display: inline-block;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #bfbfbf), color-stop(1.0, #f8f8f8));
+	border-top: solid 1px #7e7e7e;
+	border-bottom: solid 1px #7e7e7e;
+	border-left: solid 1px #7e7e7e;
+	font-size: 12px;
+	line-height: 23px;
+	text-decoration: none;
+	color: #333;
+	text-shadow:0 1px 0 #f6f6f6;
+	padding: 5px 10px;
+	-webkit-box-shadow: 0px 1px 2px rgba(255,255,255,0.8); /* suttle details are the most beautiful */
+	-webkit-transition: all 0.5s ease;
+}
+
+#DataViews li a:active, #DataViews li.Selected a {
+	background: #878787;
+	color: #eee;
+	box-shadow: inset 0px 4px 8px rgba(0,0,0,0.3), inset rgba(255,255,255,0.3) 0px -3px 12px, 0px 1px 2px rgba(255,255,255,0.8);
+	text-shadow: none;
+}
+
+#DataViews li:first-child a {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+#DataViews li:last-child a {
+	border-right: solid 1px #7e7e7e;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#Main {
+	-webkit-box-flex: 1;
+	-webkit-box-orient: horizontal;
+	display: -webkit-box;
+	background: #fff;
+	border-top: solid 1px #c0c0c0;
+	border-bottom: solid 1px #c0c0c0;
+}
+
+#Data {
+	background: #f0f0f0;
+	-webkit-box-flex: 6;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+
+#View {
+	-webkit-box-flex: 1;
+	overflow: auto;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+
+.Hidden {
+	display: none;
+}
+
+
+.Splitter {
+	display: -webkit-box;
+}
+
+.Splitter.Horizontal {
+	cursor: col-resize;
+	width: 10px;
+}
+
+.Splitter.Vertical {
+	cursor: row-resize;
+	height: 10px;
+}
+
+
+#DataActions {
+	list-style-type: none;
+}
+
+#DataActions li {
+	display: inline-block;
+}
+
+#DataActions li a {
+	display: inline-block;
+}
+
+#DataActions li a:after {
+	font-family: Pictos;
+}
+
+#Message:before { 
+	color: #000; 
+	background: red;
+	width: 100px; 
+	height: 100px; 
+	display: block; 
+	position: absolute; 
+	left: 0;
+	top: 0; 
+}
+
+#DataActions li input[type="range"] {
+	-webkit-appearance:	none;	/* Remove Safari default */
+	width: 120px;
+	height: 14px;
+	border-radius: 100px;
+	position: relative;
+	
+	
+	-webkit-box-shadow: 0px 1px 3px rgba(255,255,255,0.4), inset 0px 3px 5px rgba(0,0,0,0.4);
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #878787), color-stop(1, #808080));
+	cursor: ew-resize;
+	vertical-align: top;
+	padding: 0px 0px 0px 0px;
+	line-height: 14px;
+}
+
+#DataActions li input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance:	none;	/* Remove Safari default */
+	position: relative;
+	top: -1px;
+	z-index: 1;
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	border-radius: 100px;
+	border: rgba(0,0,0,0.3) 1px solid;
+    border-top-color: rgba(0,0,0,0.1);
+    border-left-color: rgba(0,0,0,0.2);
+    border-right-color: rgba(0,0,0,0.2);
+    border-bottom-color: rgba(0,0,0,0.3);
+    box-shadow: inset rgba(255,255,255,0.3) -2px -2px 2px,
+                inset rgba(255,255,255,0.3) 0px 2px 2px,
+                inset rgba(255,255,255,1) 0px 2px 1px,
+                rgba(0,0,0,0.4) 0px 2px 2px;
+	background:  
+						-webkit-linear-gradient(left, #888888 0%,#dddddd 50%,#888888 100%),
+						-webkit-radial-gradient(  50%   0%,  8% 50%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 100%),
+                        -webkit-radial-gradient(  50% 100%, 12% 50%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 100%),
+                        -webkit-radial-gradient(   0%  50%, 50%  7%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 100%),
+                        -webkit-radial-gradient( 100%  50%, 50%  5%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 100%),
+                        -webkit-repeating-radial-gradient(  50% 50%, 100% 100%, hsla(0,0%,  0%,0) 0%, hsla(0,0%,  0%,0)   3%, hsla(0,0%,  0%,.1) 3.5%),
+                        -webkit-repeating-radial-gradient(  50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0)   6%, hsla(0,0%,100%,.1) 7.5%),
+                        -webkit-repeating-radial-gradient(  50% 50%, 100% 100%, hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 1.2%, hsla(0,0%,100%,0) 2.2%);
+	display: block;
+}
+
+
+.VolumeSlider {
+	margin: auto 2em auto 2em  ;
+}
+
+.VolumeSlider:before, .VolumeSlider:after {
+	font-size: 26px;
+	line-height: 0px;
+	font-family: 'Pictos', sans-serif;	
+	color: #444;
+	display: inline-block;
+	position: absolute;
+	text-shadow: 0px 1px 2px rgba(255,255,255,0.8); /* subtle details are the most beautiful */
+	top: 50%;
+}
+
+.VolumeSlider:before { content: "\1EA9"; right: 100%; }
+.VolumeSlider:after { content: "\1EAB"; left: 100%; }
+
+#Additional {
+	-webkit-box-shadow: inset 0px 10px 8px  rgba(0,0,0,0.3);
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #7c8697), color-stop(1, #60697a));
+	-webkit-box-align: center;
+	display: -webkit-box;
+	padding: 24px;
+		display: none;
+
+}
+
+
+
+.Configuration {
+	background: #fff;
+	-webkit-box-flex: 1.0;
+	padding: 12px;
+}
+
+li a[contenteditable=true] {
+	-webkit-user-select: auto !important;
+	background: #fff !important;
+	color: #000 !important;
+}

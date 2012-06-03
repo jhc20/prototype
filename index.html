@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Pool Storage</title>
+		
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8"/>
+
+		<link rel="icon" type="image/png" href="images/favicon.png"/>
+		
+		<!-- Global Styles -->
+		<link rel="stylesheet" href="styles/global.css" type="text/css"/>
+
+		<link rel="stylesheet" href="styles/grid.css" type="text/css"/>
+		<link rel="stylesheet" href="styles/coverflow.css" type="text/css"/>
+				
+		<!-- UI Elements -->
+		<link rel="stylesheet" href="styles/ui/dialog.css" type="text/css" charset="utf-8"/>
+		<link rel="stylesheet" href="styles/ui/loader.css" type="text/css" charset="utf-8"/>
+		<link rel="stylesheet" href="styles/ui/button.css" type="text/css" charset="utf-8"/>
+		<link rel="stylesheet" href="styles/ui/bubble.css" type="text/css" charset="utf-8"/>
+				
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="scripts/filterbuilder.js"></script>
+		<script type="text/javascript" src="scripts/mapping.js"></script>
+		<script type="text/javascript" src="scripts/querybuilder.js"></script>
+		<script type="text/javascript" src="scripts/test.js"></script>
+
+	</head>
+	<body id="index">
+		<div id="Container">
+			<!--
+			<header>
+				Izaak's Pool 
+			</header>
+			-->
+			
+			<div class="Notifications">
+				<div class="Notification">
+					<a class="Close">ố</a>
+					<img src="images/camera.png" alt="" style="width: 48px; float: left; margin-right: 10px;"/>
+					<h1>Camera Attached</h1>
+					<span>Sony DSC4522 available for use.</span>
+				</div>
+				<div class="Notification">
+					<a class="Close">ố</a>
+					<img src="images/cake.png" alt="" style="width: 48px; float: left; margin-right: 10px;"/>
+					<h1>New Recipes</h1>
+					<span>Including <a href="">chocolate fudge cake</a>.</span>
+				</div>
+				<div class="Notification">
+					<a class="Close">ố</a>
+					<img src="images/document.png" alt="" style="width: 48px; float: left; margin-right: 10px;"/>
+					<h1>New Assignments</h1>
+					<span>
+						Including a <a href="">compiler exercise</a> for <a href="">CMPT 379</a> and 
+						a <a href="">worksheet</a> for <a href="">MATH 242</a>.
+					</span>
+				</div>
+				<div class="Notification">
+					<a class="Close">ố</a>
+					<img src="images/education.png" alt="" style="width: 48px; float: left; margin-right: 10px;"/>
+					<h1>Semester Enrollment</h1>
+					<span>The summer term <a href="">enrollment</a> is coming up in 7 days.</span>
+				</div>
+			</div>
+
+
+			<div class="Dialog">
+				<h1>Create new storage pool</h1>
+				<div style="margin-top: 20px; margin-bottom: 20px;">
+					<div class="Loader">Loading</div> Creating your storage pool, please wait
+				</div>
+				<div class="Buttons">
+					<a href="#" class="Cancel Button">Cancel</a>
+					<a href="#" class="Default Button">Create</a>
+				</div>
+				
+			</div>
+			<div id="TopBar">
+				<ul id="DataActions">
+					
+					<li class="PlayAction"><a id="play-previous" href="#"> </a></li>
+					<li class="PlayAction"><a id="play-play" href="#"> </a></li>
+					<li class="PlayAction"><a id="play-next" href="#"> </a></li>
+					<li><input type="range" class="VolumeSlider" min="1" max="100" step="1" /></li>
+					
+				</ul>
+				<div id="Status">
+					<a href="#" id="CycleStatusLink" title="Click here to cycle the status pane."></a>
+					<ul><li class="Logo"><div><span>ḅ</span></div></li></ul>
+				</div>
+				<ul id="DataViews" class="SelectableContainer" data-selection-scope="derp3">
+					<li><a href="" class="Item">List</a></li>
+					<li class="Selected Item"><a href="">Coverflow</a></li>
+					<li><a href="" class="Item">Grid</a></li>
+				</ul>
+				
+				<form id="Search"><input type="search" name="query" placeholder="Search"/></form>
+				
+			</div>
+			<div id="Main">
+				<div id="SideBar">
+					<div id="DataList" >
+						<ul class="SelectableContainer" data-selection-scope="derp" tabindex="0">
+							<li>
+								<div>
+									<a href="" class="Everything Item WithIcon">Everything</a>
+								</div>
+							</li>
+							<!-- Libraries -->
+							<li class="Opened">
+								<div>
+									<a href="" class="SubtreeVisibilityModifier VisibilityModifier">Close</a>
+									<a href="" class="Item">Libraries</a>
+								</div>
+								<ul id="Libraries">
+									<li class="Selected">
+										<div>
+											<a href="" class="Music Item WithIcon">Music</a>
+											<a href="" class="Count">28</a>
+
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="" class="Photos Item WithIcon">Photos</a>
+											<a href="" class="Count">4</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="" class="Movies Item WithIcon">Movies</a>
+											<a href="" class="Count">2</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="" class="TVShows Item WithIcon">TV Shows</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="" class="Books Item WithIcon">Books</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="" class="Mail Item WithIcon">Mail</a>
+											<a href="" class="Count">238</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="" class="Food Item WithIcon">Food</a>
+											<a href="" class="Count">8</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+							
+							<!-- Collections -->
+							<li class="Opened">
+								<div>
+									<a href="" class="SubtreeVisibilityModifier VisibilityModifier">Close</a>
+									<a href="" class="Collection Item">Collections</a>
+								</div>
+								<ul id="Collections">
+									<li>
+										<div>
+											<a href="" class="Collection Item WithIcon">Favorite Books</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="" class="Collection Item WithIcon">Roadtrip Songs</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="" class="Collection Item WithIcon">CMPT300</a>
+										</div>
+									</li>
+									<li>
+										<div>
+											<a href="" class="Smart Collection Item WithIcon">Recently Listened</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+							
+							<!-- Data Sources -->
+							<li class="Opened">
+								<div>
+									<a href="" class="SubtreeVisibilityModifier VisibilityModifier">Close</a>
+									<a href="" class="Item">Storage</a>
+								</div>
+								<ul id="Sources">
+									<li>
+										<div>
+											<a href="" class="Disk Item WithIcon">Local Disk</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+							
+							<!-- System -->
+							<li class="Opened">
+								<div>
+									<a href="" class="SubtreeVisibilityModifier VisibilityModifier">Close</a>
+									<a href="" class="Item">System</a>
+								</div>
+								<ul>
+									<li>
+										<div>
+											<a class="Preferences Item WithIcon" href="#">Preferences</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					
+					<div id="SideBarActions">
+						<ul>
+							<li><a id="AddCollectionLink" href="#"> </a></li>
+							<li><a id="AddSourceLink" href="#"> </a></li>
+						</ul>
+						<div class="Splitter" id="SideBarResizer" rel="#SideBar"></div>
+					</div>
+					
+				</div>
+				<div id="Data">
+					<a class="FiltersVisibilityModifier VisibilityModifier" href="" style="" data-target="#Filters">Filters</a>
+					<ul id="Types" class="Opened SelectableContainer" data-selection-scope="derp2">
+						<li class="Selected">
+							<a href="" class="Item">Songs</a>
+						</li>
+						<li>
+							<a href="" class="Item">Albums</a>
+						</li>
+						<li>
+							<a href="" class="Item">Genres</a>
+						</li>
+					</ul>
+					
+					<form id="Filters">
+						<div style="padding: 4px; display: -webkit-box; -webkit-box-align: center; border-bottom: solid 1px #c0c0c0; background: #ccc; ">
+							<div style="-webkit-box-flex: 1.0;">Advanced filters:</div>
+							<a href="">Clear</a> <a href="">Save as smart collection</a>
+						</div>
+						<ul>
+							<li>
+								<div class="AddRemove">
+									<a class="Add" href="">+</a>
+									<a class="Remove" href="">-</a>
+								</div>
+								<div class="Query">
+									<select>
+										<optgroup label="Logic Operator">
+											<option>and</option>
+											<option>or</option>
+										</optgroup>
+										<optgroup id="PropertyGroup" label="Property">
+											<option>Artist</option>
+										</optgroup>
+									</select> 
+									<select><option>starts with</option></select> 
+									<input type="text" placeholder="barrage"/>
+								</div>
+							</li>
+							<li>
+								<div class="AddRemove">
+									<a class="Add" href="">+</a>
+									<a class="Remove" href="">-</a>
+								</div>
+								<div class="Query">
+									<select><option>Genre</option></select> 
+									<select><option>is</option></select> 
+									<input type="text" placeholder="folk"/>
+								</div>
+							</li>
+						</ul>
+						
+					</form>
+				
+					<div id="View">
+						<ul class="Coverflow">
+							<li><a href=""><img src="test/girlsg-mrtaxi.jpg" alt=""/></a></li>
+							<li><a href=""><img src="test/paramo-emerge.jpg" alt=""/></a></li>
+							<li><a href=""><img src="test/eminem-outtac.jpg" alt=""/></a></li>
+							<li><a href=""><img src="test/girlsg-mrtaxi.jpg" alt=""/></a></li>
+							<li class="Selected"><a href=""><img src="test/mcyrus-timeof_06.jpg" alt=""/></a></li>
+							<li><a href=""><img src="test/paramo-emerge.jpg" alt=""/></a></li>
+							<li><a href=""><img src="test/thecat-marian.jpg" alt=""/></a></li>
+							<li><a href=""><img src="test/trews-denoft.jpg" alt=""/></a></li>
+							<li><a href=""><img src="test/paramo-emerge.jpg" alt=""/></a></li>
+						</ul>
+						<div class="Splitter"></div>
+						<table class="Grid">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Set</th>
+									<th>Type</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr><td>Song A</td><td>Artist A</td><td>Album A</td></tr>
+								
+							</tbody>
+						</table>
+					</div>
+					<div id="Additional">
+
+						<div>
+							<div class="info">
+								Capacity<br/>
+								<span>29.06 GB</span>
+							</div>
+
+							<div id="bar">
+								<div class="blue"></div>
+								<div class="purp"></div>
+								<div class="org"></div>
+								<div class="green"></div>
+								<div class="yell"></div>
+								<div class="free"></div>
+							</div>
+								
+							<ul id="led">
+								<li>Audio</li>
+								<li>Video</li>
+								<li>Photos</li>
+								<li>Apps</li>
+								<li>Other</li>
+								<li>Free</li>
+							</ul>
+						</div>
+
+						<!--
+						<a href="#" class="Button">Configure</a> 
+						-->
+						<a href="#" class="Synchronize Button">Synchronize</a>
+						<a href="#" class="Remove Button">Remove</a>
+					</div>
+					
+				</div>
+			</div>
+			<footer>
+				<ul>
+					<li><a id="AboutLink" href="../../Homepage/www/index.html#TheTeam">About</a></li>
+					<li><a id="HelpLink" href="http://cmpt470.csil.sfu.ca/~twa40/PoolStorageUserGuide.pdf" target="_blank">Help</a></li>
+					<li><a id="LogoutLink" href="logout.php">Logout</a></li>
+				</ul>
+				35,345 songs.
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+.Button, .Button:visited, input[type=submit], input[type=button]
+{
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #b2b0b0), color-stop(1, #fdfcfc));;
+	display: inline-block; 
+	padding: 5px 30px 6px; 
+	color: #222; 
+	text-decoration: none;
+	border-radius: 999px;
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+	text-shadow:0 1px 0 #f6f6f6;
+	/*text-shadow: 0 -1px 1px rgba(255,255,255,0.25);*/
+	/*text-shadow:none;*/
+	/*border: 1px solid #727272;*/
+	position: relative;
+	cursor: pointer;
+	font-weight: normal;
+	-webkit-user-select: none;
+	border: solid 1px #666;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button {
+	-webkit-appearance: none;
+}
+
+
+/*
+	color: #fff !important; 
+	background: #333
+	
+
+
+	background-color: #111; 
+
+*/
+
+.Button:active, input[type=submit]:active, input[type=button]:active { 
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #555), color-stop(1, #333));;
+	color: #ccc; 
+	text-decoration: none !important;
+	text-shadow:0 1px 0 #060606;
+}
+
+.Small.Button, .Small.Button:visited { 
+	font-size: 11px;
+	padding: 3px 10px 4px;  
+}
+
+.Button, .Button:visited, .Medium.Button, .Medium.Button:visited { 
+	font-size: 13px; 
+}
+
+.Large.Button, .Large.Button:visited { 
+	font-size: 14px; 
+	padding: 8px 14px 9px; 
+}
+

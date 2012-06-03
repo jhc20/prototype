@@ -1,0 +1,48 @@
+/**
+ * loader.css
+ * @author Izaak Schroeder
+ *
+ * Loader UI element.
+ *
+ * @note Inspired and basically stolen from the smart people at 37 signals:
+ * http://37signals.com/svn/posts/2577-loading-spinner-animation-using-css-and-webkit
+ */
+
+.Loader > div {
+	width: 12%;
+	height: 26%;
+	background: #000;
+	position: absolute;
+	left: 44.5%;
+	top: 37%;
+	opacity: 0;
+	-webkit-animation: LoaderFade 1s linear infinite;
+	-webkit-border-radius: 50px;
+	-webkit-box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+
+.Loader .Bar1 {-webkit-transform:rotate(0deg) translate(0, -142%); -webkit-animation-delay: 0s;}    
+.Loader .Bar2 {-webkit-transform:rotate(30deg) translate(0, -142%); -webkit-animation-delay: -0.9167s;}
+.Loader .Bar3 {-webkit-transform:rotate(60deg) translate(0, -142%); -webkit-animation-delay: -0.833s;}
+.Loader .Bar4  {-webkit-transform:rotate(90deg) translate(0, -142%); -webkit-animation-delay: -0.75s;}
+.Loader .Bar5 {-webkit-transform:rotate(120deg) translate(0, -142%); -webkit-animation-delay: -0.667s;}
+.Loader .Bar6 {-webkit-transform:rotate(150deg) translate(0, -142%); -webkit-animation-delay: -0.5833s;}
+.Loader .Bar7  {-webkit-transform:rotate(180deg) translate(0, -142%); -webkit-animation-delay: -0.5s;}
+.Loader .Bar8  {-webkit-transform:rotate(210deg) translate(0, -142%); -webkit-animation-delay: -0.41667s;}
+.Loader .Bar9  {-webkit-transform:rotate(240deg) translate(0, -142%); -webkit-animation-delay: -0.333s;}
+.Loader .Bar10  {-webkit-transform:rotate(270deg) translate(0, -142%); -webkit-animation-delay: -0.25s;}
+.Loader .Bar11  {-webkit-transform:rotate(300deg) translate(0, -142%); -webkit-animation-delay: -0.1667s;}
+.Loader .Bar12  {-webkit-transform:rotate(330deg) translate(0, -142%); -webkit-animation-delay: -0.0833s;}
+ 
+@-webkit-keyframes LoaderFade {
+	from {opacity: 1;}
+	to {opacity: 0.25;}
+}
+
+.Loader {
+	position: relative;
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	vertical-align: middle;
+}

@@ -1,0 +1,40 @@
+/**
+ * dialog.css
+ * @author Izaak Schroeder
+ *
+ * Dialog UI element.
+ */
+
+.Dialog {
+	display: block; 
+	width: 50%; 
+	left: 25%;
+	position: absolute; 
+	top: -10px; /* To hide the drop shadow */
+	z-index: 100; 
+	border: solid 1px #c0c0c0; 
+	-webkit-box-shadow: 0px 3px 12px rgba(0,0,0,0.25); 
+	padding: 30px 20px 20px 20px; /* Extra 10px on the top to offset the top: -10px; */
+	border-bottom-left-radius: 12px;
+	border-bottom-right-radius: 12px; 
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255, 0.9)), to(rgba(230,230,230, 0.9))); 
+	-webkit-transition: -webkit-transform 0.5s ease;
+	-webkit-transform: translateY(-100%);
+	max-height: 50%;
+	overflow: auto;
+	-webkit-user-select:text;
+}
+
+.Dialog.Open {
+	 -webkit-transform: translateY(0%);
+}
+
+.Dialog h1 {
+	color: #111;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.Dialog .Buttons {
+	text-align: right;
+}

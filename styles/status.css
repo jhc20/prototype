@@ -1,0 +1,132 @@
+/**
+ * status.css
+ * @author Izaak Schroeder
+ *
+ * Styles used for the top status bar.
+ */
+
+#Status {
+	border-radius: 6px;
+	background: -webkit-linear-gradient(top, #f3f4e0 0%,#d6dbbf 100%);
+	border: solid 1px #c0c0c0;
+	text-align: center;
+	height: 50px;
+	-webkit-box-flex: 1.0;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	font-size: 12px;
+	padding-right: 20px;
+	overflow: hidden;
+	-webkit-box-shadow: 0px 1px 2px rgba(255,255,255,0.8), inset 0 1px 1px rgba(0,0,0,0.5);
+	position: relative;
+}
+
+#Status:after {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	left: 0;
+	top: 0;
+	background: rgba(255,255,255,0.2);
+	z-index: 4;
+	content: " ";
+}
+
+
+#Status > ul {
+	-webkit-user-select: auto;
+	display: -webkit-box;
+	-webkit-box-flex: 1.0;
+	position: relative;
+	-webkit-box-orient: vertical;
+	height: 100%;
+
+}
+
+#Status > ul > li {
+	display: -webkit-box;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	
+}
+
+#Status > ul > li:first-child {
+
+}
+
+.Status {
+	-webkit-box-flex: 1.0;
+}
+
+.Status > * {
+	width: 100%;
+	display: block;
+}
+
+#Status progress {
+	margin-top: 5px;
+	height: 12px;
+}
+
+#Status .Message {
+	text-overflow: ellipsis; 
+	text-align: center;
+	white-space: nowrap; 
+	overflow: hidden; 
+}
+
+#CycleStatusLink:after {	
+	font-family:'Pictos', sans-serif;
+	
+	display: inline-block;
+	position: relative;
+	font-size: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+	color: #666;
+	z-index: 5;
+	
+}
+
+#CycleStatusLink:hover:after {
+	color: #000;
+}
+
+
+#CycleStatusLink:after { 
+	content: "\1EE3"; 
+}
+
+
+.Logo > div {
+	text-align: center; width: 100%;
+}
+
+.Logo > div > span {
+	font-family: Pictos; 
+	font-size: 50px; 
+	-webkit-user-select: none;
+	
+	-webkit-animation-name: rainbow;
+	-webkit-animation-duration: 4s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes rainbow {
+	0% {
+		/*color: hsla(0,50%,50%,1);*/
+		color: hsla(0,20%,50%,0.9);
+	}
+	50% {
+		color: hsla(180,20%,50%,0.9);
+	}
+	100% {
+		/*color: hsla(359,50%,50%,1);*/
+		color: hsla(360,20%,50%,0.9);
+	}
+}
+

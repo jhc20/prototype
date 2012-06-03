@@ -1,0 +1,96 @@
+body {
+	background: #222 url(../images/login-background.jpg) no-repeat !important;
+	background-size: cover;
+}
+
+#Container {
+	display: -webkit-box;
+	width: 100%;
+	height: 100%;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	background: none;
+}
+
+form {
+	width: 600px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center; 
+	background: rgba(0,0,0,0.5); 
+	border-radius: 12px;
+}
+
+input, textarea, select
+{
+	padding: 5px;
+	margin: 0;
+}
+
+form label {
+	color: #fff !important;
+	display: none;
+}
+
+form input[type=text], form input[type=password] {
+	width: 100%;
+	-webkit-box-sizing: border-box;
+}
+
+form > div {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+form > div > fieldset > div {
+	margin-top: 10px;
+	color: #ccc;
+}
+
+form a {
+	color: #ccc;
+}
+
+form a:hover {
+	
+}
+
+#Logo {
+	font-family: "Pictos";
+	font-size: 50px;
+	font-weight: bold;
+	color: #fff;
+	position: absolute;
+	right: 0;
+	bottom: -10px;
+	display: block;
+	text-shadow: rgba(255,255,255,0) 0 0 13px;
+	/* -webkit-transition: all 1s linear;*/
+}
+
+#Logo:hover {
+	
+	text-shadow: rgba(255,255,255,1) 0 0 13px; 
+}
+
+fieldset {
+	border: none;
+}
+
+header, footer {
+	color: #fff; 
+	width: 600px; 
+	margin-bottom: 12px; 
+	text-shadow: rgba(0,0,0,1) 0 0 10px; 
+	position: relative;
+	font-size: 16px;
+	text-align: left; 
+}
+
+header {
+	text-indent: 5px;
+}
+
+footer {
+	text-align: center;
+}

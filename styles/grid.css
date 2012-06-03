@@ -1,0 +1,47 @@
+
+
+.Grid {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	background: #fff;
+}
+
+.Grid thead th {
+	color: #333;
+	text-align: left;
+	padding: 4px;
+	font-size: 10px;
+	background: -webkit-linear-gradient(top, #dbdbdb 0%,#bbbbbb 100%);
+	border-top: solid 1px #404040;
+	border-bottom: solid 1px #555555;
+	border-right: solid 1px #a8a8a8;
+	border-left: solid 1px #e2e2e2;
+}
+
+.Grid tbody td:last-child {
+	border-right: none !important;
+}
+
+.Grid tbody td {
+	padding: 5px;
+	font-size: 12px;
+	color: #222;
+	border-right: solid 1px #d9d9d9;
+}
+
+.Grid tbody tr.Selected td {
+	color: #fff;
+	background: #4b95e5 !important;
+	border-bottom: solid 1px #7daaea;
+	font-weight: bold;
+}
+
+.Grid tbody tr:nth-child(2n+1) td {
+	background: #fff;
+}
+
+.Grid tbody tr:nth-child(2n) td {
+	background: #f2f5f9;
+}
+

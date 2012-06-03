@@ -1,0 +1,16 @@
+
+@font-face { 
+	font-family: 'Lucida Grande'; 
+	src: url('../fonts/Lucida Grande.ttf'); 
+} 
+
+@font-face { 
+	font-family: 'Lucida Grande'; 
+	font-weight: bold; 
+	src: url('../fonts/Lucida Grande Bold.ttf'); 
+}
+
+@font-face { 
+	font-family: 'Pictos'; 
+	src: url('../fonts/Pictos.ttf'); 
+}

@@ -1,0 +1,98 @@
+
+
+#Filters {
+	background: #fff;
+	font-size: 12px;
+	border-bottom: solid 1px #c0c0c0;
+	overflow: auto;
+	
+
+}
+
+#Filters:not(.Opened) {
+	max-height: 0;
+	-webkit-transition: all 0s linear;
+}
+
+#Filters.Opened {
+	max-height: 9999px;
+	-webkit-transition: all 8s linear;
+}
+
+#Filters ul {
+	list-style-type: none;
+}
+
+#Filters .AddRemove, #Filters .Query {
+	display: inline-block;
+}
+
+#Filters ul li {
+	background: #ececec;
+	border-top: solid 1px #f9f9f8;
+	border-bottom: solid 1px #c5c5c5;
+	padding: 3px;
+}
+
+
+#Filters select {
+	-webkit-appearance: none;
+	padding: 1px 20px 1px 4px;
+	background: url('../images/up-down-arrow.png') no-repeat scroll 90% 50%, -webkit-linear-gradient(top, #f6f6f6 0%, #dedede 100%);
+	background-size: auto 50%, auto;
+}
+
+#Filters a {
+	display: inline-block;
+	
+	padding: 4px 10px;
+	line-height: 1em;
+	text-align: center;
+	
+	
+	background: -webkit-linear-gradient(top, #f6f6f6 0%, #dedede 100%);
+}
+
+.FiltersVisibilityModifier:before {
+	background: #aaa;
+
+	background-repeat: no-repeat;
+	-webkit-mask: url(../images/triangle.png) no-repeat scroll 0 0;
+	-webkit-mask-size: contain;
+	-webkit-transform-origin: 50% 50%;
+	content:" ";
+	position: absolute;
+	width: 0.8em;
+	height: 0.8em;
+	right: 100%;
+	top: 0.7em;
+	margin-right: 3px;
+
+	-webkit-transform: rotate(90deg);
+}
+
+.FiltersVisibilityModifier {
+	position: absolute; right: 10px; padding: 4px; margin: 10px; color: #ccc;
+	font-size: 12px;
+}
+
+.FiltersVisibilityModifier:hover {
+	color: #fff;
+}
+
+.FiltersVisibilityModifier:hover:before {
+	background: #fff;
+}
+
+#Filters .AddRemove a {
+	width: 1em;
+	height: 1em;
+	font-family: "Arial";
+	font-weight: bold;
+	padding: 4px;
+}
+
+#Filters a, #Filters select {
+	border-radius: 19px;
+	border: solid 1px #a4a4a4;
+}

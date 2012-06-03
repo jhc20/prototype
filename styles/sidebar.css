@@ -1,0 +1,315 @@
+
+#SideBar {
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	
+	background: #d5dbe4;
+	border-right: solid 1px #999;
+	min-width: 250px;
+	max-width: 30%;
+	width: 250px;
+	box-shadow: 0 0px 10px rgba(0,0,0,0.2) inset;
+	
+	resize: horizontal;
+	overflow: hidden;
+	
+}
+
+#DataList {
+	overflow-y: auto;
+	resize: none;
+	-webkit-box-flex: 1.0;
+}
+
+
+
+.Folder a:after {
+
+}
+
+
+.WithIcon:before {
+	content: " ";
+	width: 1.5em;
+	height: 1.5em;
+	margin-right: 5px;
+	display: block;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+	z-index: 1;
+}
+
+
+.Folder > div > a.Item:before {
+	background-image: url(../images/folder.png);
+	
+}
+
+#DataList  li {
+	position: relative;
+}
+
+
+
+
+#DataList ul > li:not(.Opened) > ul {
+	opacity: 0;
+	height: 0px;
+	overflow-y: hidden;
+	-webkit-transition: all 0.5s ease;
+}
+
+#DataList ul > li.Opened > ul {
+	-webkit-transition: all 0.5s ease;
+	opacity: 1;
+	height: auto;
+}
+
+#DataList li
+{
+	padding-left: 12px;
+	line-height: 24px;
+	position: relative;
+	list-style-type: none;
+
+}
+
+
+
+
+
+#DataList li.Selected:after {
+	content: " ";
+	position: absolute;
+	left: -100%;
+	right: 0;
+	top: 0;
+	height: 1em;
+	padding: 5px;
+
+	background: -webkit-linear-gradient(top, #d1d1d1 0%,#a8a8a8 100%);
+	
+	box-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	z-index: 0;
+}
+
+#DataList *:focus li.Selected:after {
+	background: -webkit-linear-gradient(top, #5993d3 0%,#1252aa 100%);
+}
+
+
+
+
+#DataList > ul > li {
+	margin-top: 10px;
+}
+
+#DataList li:first-child {
+	
+}
+
+#DataList li div {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	padding-right: 12px;
+}
+
+#DataList li a {
+	padding: 3px;
+	font-size: 13px;
+	line-height: 13px;
+	text-decoration: none;
+	outline: none;
+	position: relative;
+	text-overflow: ellipsis;
+	z-index: 1;
+	position: relative;
+	display: -webkit-box;
+	-webkit-box-align: center;
+
+	font-weight: normal;
+	color: #222;
+	overflow: hidden;
+	white-space: nowrap;
+
+}
+
+#DataList li a.SubtreeVisibilityModifier {
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+		color-stop(0, rgba(90,90,90, 1.0)),
+		color-stop(1, rgba(90,90,90, 1.0)));
+
+	background-repeat: no-repeat;
+	-webkit-mask: url(../images/triangle.png) no-repeat scroll 0 0;
+	-webkit-mask-size: contain;
+	-webkit-transform-origin: 20% 50%;
+	top: -2px;
+	height: 8px;
+	width: 8px;
+	position: relative;
+	padding: 0 6px 0 0 !important;
+	background-size: contain;
+	color: transparent;
+}
+
+#DataList li.Closed > div > a.SubtreeVisibilityModifier {
+	-webkit-transform: rotate(0deg);
+	-webkit-transition: all 0.16s linear;
+}
+
+#DataList li.Opened > div > a.SubtreeVisibilityModifier {
+	-webkit-transform: rotate(90deg);
+	-webkit-transition: all 0.16s linear;
+}
+
+#DataList li a.SubtreeVisibilityModifier:active {
+	background-image: -webkit-gradient(linear, 0 0, 0 100%,
+		color-stop(0, rgba(30,30,30, 1.0)),
+		color-stop(1, rgba(30,30,30, 1.0)));
+}
+
+#DataList li a.Item
+{
+	text-shadow: 0 1px 0 #f6f6f6;
+	text-transform: none;
+	
+	-webkit-box-flex: 1.0;
+	
+}
+
+#DataList li.Selected a
+{
+	font-weight: bold;
+	color: #fff;
+	text-shadow: none !important;
+}
+
+#DataList > *:not(:focus) li.Selected a {
+	font-weight: normal;
+	color: #666 ;
+}
+
+#DataList ul {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+
+#DataList li {
+	-webkit-box-orient: horizontal;
+	
+	-webkit-box-lines: multiple;
+}
+
+#DataList li a:active {
+	color: #000;
+	text-shadow:0 1px 0 #eee;
+}
+
+
+#SideBarActions {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, #e6e6e6), color-stop(0.5, #f7f7f7));
+	border-top: solid 1px #c0c0c0;
+	position: relative;
+	margin-right: 8px;
+}
+
+#SideBarActions ul {
+	list-style-type: none;
+}
+
+
+#SideBarActions li {
+	float: left;
+}
+
+#SideBarActions li a {
+	display: inline-block;
+	border-right: solid 1px #c0c0c0;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	text-decoration: none;
+	color: #333;
+	text-shadow:0 1px 0 #f6f6f6;
+	
+}
+
+#SideBarActions li a:active {
+	background: rgba(0,0,0,0.6);
+	color: #eee;
+	text-shadow: none;
+}
+
+
+
+
+#SideBar .Count {
+	display: block;
+	font-size: 9px;
+	border-radius: 10px;
+	padding: 3px 6px;
+	background: rgba(0,0,0,0.6);
+	color: #eee;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+
+#SideBar .Selected .Count {
+	background: #fff;
+	color: #333;
+}
+
+
+
+.Music:before {
+	background-image: url(../images/music.png);
+}
+
+.Movies:before {
+	background-image: url(../images/movies.png);
+}
+
+.Photos:before {
+	background-image: url(../images/photos.png);
+}
+
+.Books:before {
+	background-image: url(../images/books.png);
+}
+
+.Disk:before {
+	background-image: url(../images/disk.png);
+}
+
+.Everything:before {
+	background-image: url(../images/everything.png);
+}
+
+.Collection:before {
+	background-image: url(../images/collection.png);
+}
+
+.Smart.Collection:before {
+	background-image: url(../images/smart-collection.png);
+}
+
+.Mail:before {
+	background-image: url(../images/mail.png);
+}
+
+.Food:before {
+	background-image: url(../images/food.png);
+}
+
+.TVShows:before {
+	background-image: url(../images/tv.png);
+}
+
+
+.Preferences:before {
+	background-image: url(../images/preferences.png);
+}

@@ -1,0 +1,53 @@
+
+#Types {
+	list-style-type: none;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #111),  color-stop(0.5, #222),color-stop(0.5, #333),  color-stop(1, #666));
+	text-align: center;
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-pack: center;
+	
+}
+
+#Types li {
+	display: block;	
+}
+
+#Types li a {
+	margin-top: 8px;
+	margin-bottom: 12px;
+	display: inline-block;
+	padding-top: 2px;
+	padding-bottom: 5px;
+	padding-left: 12px;
+	padding-right: 12px;
+	color: #fff;
+	text-shadow: 0 -1px 0 #000;
+	border-top: solid 1px #1e1e20;
+	border-right: solid 1px #1e1e20;
+	background: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, rgba(255,255,255,0.2)));
+	min-width: 5em;
+	-webkit-box-shadow: 0px 1px 1px rgba(255,255,255,0.4); /* suttle details are the most beautiful */
+	font-size: 90%;
+	-webkit-transition: all 0.5s ease;
+}
+
+#Types li a:active, #Types li.Selected a {
+	background-color: #000;
+}
+
+#Types li.Selected a {
+	font-weight: bold;
+}
+
+#Types li:first-child a {
+	border-left: solid 1px #1e1e20;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+#Types li:last-child a {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
